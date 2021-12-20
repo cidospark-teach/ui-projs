@@ -9,20 +9,39 @@
     <link href="main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <ul>
-        <li><a href="#section1">section1</a></li>
-        <li><a href="#section2">section2</a></li>
-        <li><a href="#section3">section3</a></li>
-        <li><a href="#section4">section4</a></li>
-        <li><a href="#section5">section5</a></li>
-    </ul>
+    <div class="menu-wrap">
+        
+        <ul>
+            <li id="no-bg"><div id="logo-box">cidospark-teach</div></li>
+            <li><a href="#pg1" class="menu-link" id="active">Page 1</a></li>
+            <li><a href="#pg2" class="menu-link">Page 2</a></li>
+            <li><a href="#pg3" class="menu-link">Page 3</a></li>
+            <li><a href="#pg4" class="menu-link">Page 4</a></li>
+            <li><a href="#pg5" class="menu-link">Page 5</a></li>
+        </ul>
+    </div>
 
     <div class="content">
-        <section id="section1"><h2>section1</h2></section>
-        <section id="section2"><h2>section2</h2></section>
-        <section id="section3"><h2>section3</h2></section>
-        <section id="section4"><h2>section4</h2></section>
-        <section id="section5"><h2>section5</h2></section>
+        <section id="pg1"><h2>page 1</h2></section>
+        <section id="pg2"><h2>page 2</h2></section>
+        <section id="pg3"><h2>page 3</h2></section>
+        <section id="pg4"><h2>page 4</h2></section>
+        <section id="pg5"><h2>page 5</h2></section>
     </div>
 </body>
+
+<script>
+    let elems = document.querySelectorAll(".menu-link");
+    elems.forEach(elem => {
+        elem.addEventListener('click', (e) => {
+            this.removeBg();
+            e.target.style.background = "rgba(255, 255, 255, .15)";
+        })
+    })
+
+    function removeBg(){
+        elems.forEach(elem => elem.style.background = "none");
+        //alert(elems)
+    }
+</script>
 </html>
