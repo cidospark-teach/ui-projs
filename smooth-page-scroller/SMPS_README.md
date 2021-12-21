@@ -4,6 +4,7 @@ A simple implementation of smooth scroll page using pure html and css
 ## Tools
 - HTML
 - CSS
+- JavaScript Vanilla
 
 ## Note
 I simply added this `scroll-behavior: smooth;` to the html selector in the css file. That's what gives it the smooth scroll behaviour
