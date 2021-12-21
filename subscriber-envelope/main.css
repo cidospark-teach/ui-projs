@@ -69,9 +69,11 @@ form h3{
     color: #bbb;
 }
 
-.card:hover .mail #info-card{
-    top: -170px;
-    transition: top .2s linear .3s;
+.card .mail #info-card{
+    animation: .4s SlideLetterUp forwards;
+    animation-delay: .6s;
+    /* transition: top .2s linear .3s; */
+    z-index: -1;
 }
 
 .mail #subscribe{
@@ -131,17 +133,30 @@ form h3{
 .card::after{
     background-color: #5cf;
     clip-path: polygon(0 0, 50% 50%, 100% 0);
-    transition: transform .2s ease-out;
-    transition-delay: .3s;
+    /* transition: transform .2s ease-out; */
+    /* transition-delay: .3s; */
     transform-origin: top;
+    animation: .6s FlipOpen forwards;
+    animation-delay: .3s;
 }
 
 .card:hover::after{
-    transform: rotateX(180deg);
-    transition-delay: .0s;
-    z-index: -3;
 }
 
 .card:hover{
-    transform: translateY(10px);
+}
+
+
+@keyframes FlipOpen{
+    100%{
+        transform: translateY(10px);
+        transform: rotateX(180deg);
+        z-index: -2;
+    }
+}
+
+@keyframes SlideLetterUp{
+    100%{
+        top: -170px;
+    }
 }
