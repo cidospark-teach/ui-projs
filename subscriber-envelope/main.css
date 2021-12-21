@@ -140,13 +140,6 @@ form h3{
     animation-delay: .3s;
 }
 
-.card:hover::after{
-}
-
-.card:hover{
-}
-
-
 @keyframes FlipOpen{
     100%{
         transform: translateY(10px);
