@@ -4,4 +4,3 @@ Pure HTML and CSS design of envelope with animation effect to email a subscriber
 ## Tools
 HTML
 CSS
-JavaScript Vanilla

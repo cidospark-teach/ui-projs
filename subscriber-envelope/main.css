@@ -9,9 +9,9 @@ html{
 }
 
 form h3{ 
-    font-size: 17px; text-transform: uppercase;
-    padding: 10px;
-    color: #999;
+    font-size: 20px; text-transform: uppercase;
+    color: #5df;
+    font-weight: bold;
 }
 
 .container{
@@ -34,19 +34,54 @@ form h3{
 }
 
 .mail form{
-    background: #fff;
     border-radius: 5px;
     position: absolute;
     transform: translateX(-50%); /* take 50% out */
-    top: 15px; left: 50%; /* push 50% in and 15px down */
-    box-shadow: 0 5px 10px rgba(0,0,0,.2);
-    text-align: center;
+    left: 50%; /* push 50% in and 15px down */
+    /* box-shadow: 0 5px 10px rgba(0,0,0,.2); */
     padding: 20px;
-    z-index: -1;
+    z-index: -2;
     width: 80%;
 }
+.mail #info-card h3{ color: #999; }
+.mail #info-card{
+    background:#fff;
+    top: 15px;
+    padding: 30px;
+    height: 250px;
+    overflow-y: auto;
+}
 
-.mail form .input-box{
+#info-card .input-box input, #info-card .input-box textarea{
+    width: 100%;
+    border: 1px solid #cccc;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+#info-card .input-box textarea{
+    width: 100%;
+    min-width: 100%; max-width: 100%;
+    max-height: 100px;
+}
+
+#info-card .input-box input::placeholder, #info-card .input-box textarea::placeholder{
+    color: #bbb;
+}
+
+.card:hover .mail #info-card{
+    top: -170px;
+    transition: top .2s linear .3s;
+}
+
+.mail #subscribe{
+    bottom: -5px;
+    text-align: center;
+    padding: 20px;
+    z-index: 5;
+}
+
+.mail #subscribe .input-box{
     display: flex;
     border-radius: 50px;
     margin: 5px;
@@ -55,18 +90,18 @@ form h3{
     min-width: 150px;
 }
 
-.mail form .input-box input[type="email"]::placeholder{
+.mail #subscribe .input-box input[type="email"]::placeholder{
     text-transform: uppercase;
 }
-.mail form .input-box input[type="email"]{
-    height: 40px; width: 100%;
-    font-size: 15px;
+.mail #subscribe .input-box input[type="email"]{
+    height: 35px; width: 100%;
+    font-size: 12px;
     color: #444;
     padding: 0 10px;
     text-align: center;
     text-transform: none;
 }
-.mail form .input-box input[type="submit"]{
+.mail #subscribe .input-box input[type="submit"]{
     width: 170px;
     background-color: #5ef;
     color: white;
@@ -76,10 +111,16 @@ form h3{
 }
 
 .card::before, .card::after{
-    content: '';
+    content: 'CIDOSPARK TEACH';
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
+    text-align: center;
+    line-height: 410px;
+    letter-spacing: .7rem;
+    /* text-shadow: 2px 2px .15px #cdf; */
+    font-size: 1.2rem;
+    color: #5df;
 }
 
 .card::before{
@@ -88,9 +129,9 @@ form h3{
 }
 
 .card::after{
-    background-color: #ccc;
+    background-color: #5cf;
     clip-path: polygon(0 0, 50% 50%, 100% 0);
-    transition: transform 2s ease-out;
+    transition: transform .2s ease-out;
     transition-delay: .3s;
     transform-origin: top;
 }
@@ -98,4 +139,9 @@ form h3{
 .card:hover::after{
     transform: rotateX(180deg);
     transition-delay: .0s;
+    z-index: -3;
+}
+
+.card:hover{
+    transform: translateY(10px);
 }
