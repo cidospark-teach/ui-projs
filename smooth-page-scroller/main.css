@@ -7,6 +7,15 @@ html{
     font-family: tahoma;
 }
 
+section{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
 #no-bg:hover, #no-bg{
     background-color: none;
 }
@@ -30,7 +39,6 @@ ul{
     position: fixed;
     top: 0; left: 0;
     background: black;
-    /* box-shadow: 2px 0px 5px black; */
     color: grey;
     padding: 0; margin: 0;
     display: flex;
@@ -41,7 +49,7 @@ ul li{
 ul li:hover{
     background-color: gray;
 }
-ul li a#active{
+.active{
     background-color: rgba(255,255,255,.15);
 }
 ul li a{
@@ -53,11 +61,11 @@ ul li a{
     text-align: center;
 }
 
-section{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
+/* 
+{
+    background: linear-gradient(-45deg, white 0%, black 30%);
+    display:flex;
+    width: 500% 
+    box-shadow: 2px 0px 5px black;
 }
+*/
