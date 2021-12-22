@@ -32,6 +32,17 @@ section{
     text-transform: uppercase;
     font-weight: bold;
 }
+#menu-btn{
+    position: absolute;
+    right: 40px; top: 10px;
+    font-size: 17px;
+    width: 50px; height: 50px;
+    background-color: rgba(255, 255, 255, .3);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+}
 
 ul{
     list-style: none;
@@ -46,11 +57,14 @@ ul{
 ul li{
     flex: 1;
 }
-ul li:hover{
-    background-color: gray;
-}
+/* ul li:last-child:hover{
+    background-color: none !important;
+} */
 .active{
     background-color: rgba(255,255,255,.15);
+}
+ul li a:hover{
+    background-color: gray;
 }
 ul li a{
     padding: 22px 15px;
