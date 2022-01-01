@@ -79,8 +79,12 @@ header h4{
     transition: transform .2s linear, background-color .5s linear;
 }
 .news-list ul li:hover{
-    background-color: #eee;
+    background-color: #000;
+    color: #fff;
     transform: scale(1.05);
+}
+.news-list ul li:last-child:hover{
+    color: #000;
 }
 #pages{
     position: absolute;
@@ -103,6 +107,7 @@ header h4{
     cursor: pointer;
 }
 
+.active-page{background-color: #000; color: #fff;}
 .news-contents{
     flex: 2 1 1;    /* border:1px solid red; */
     width: 100%;
