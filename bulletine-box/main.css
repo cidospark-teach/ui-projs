@@ -1,0 +1,111 @@
+*{
+    margin: 0; padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: tahoma;
+    font-weight: normal;
+    letter-spacing: 1.2px;
+}
+
+ul{
+    list-style: none;
+}
+
+html{
+    background-color: #000;
+}
+
+header{ 
+    text-align: center; 
+    width: 100%;
+    white-space: nowrap;
+    margin-bottom: 50px;
+}
+header h2{
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 5.5px;
+}
+header h4{
+    text-transform: capitalize;
+    color: #ddd;
+}
+
+.container{
+    width: 80%;
+    max-width: 750px;
+    height: 100vh;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bulletine-wrapper{
+    background-color: #fff;
+    min-width: 320px;
+    width:100%;
+    height: 260px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0px 2px 5px rgba(151, 148, 148, 0.877);
+}
+.bulletine-title{
+    height: 40px;
+    background-color: #ccc;
+    text-transform: uppercase;
+    font-size: 17px;
+    letter-spacing: .5px;
+    padding: 0px 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 40px;
+    font-weight: bold;
+}
+.news-list{
+    min-width: 200px;
+    position: relative;
+    overflow: hidden;
+}
+.news-list ul li{
+    /* border: 1px solid grey; */
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    transition: transform .2s linear, background-color .5s linear;
+}
+.news-list ul li:hover{
+    background-color: #eee;
+    transform: scale(1.05);
+}
+#pages{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background-color: transparent;
+    transition: none;
+    transform: none;
+}
+#pages ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+#pages ul li{
+    border: 1px solid #eee;
+    margin: 2px;  
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.news-contents{
+    flex: 2 1 1;    /* border:1px solid red; */
+    width: 100%;
+    padding: 40px;
+    background-color: #f8f8f8;
+}
