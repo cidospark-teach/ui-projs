@@ -76,11 +76,11 @@ header h4{
     white-space: nowrap;
     text-overflow: ellipsis;
     cursor: pointer;
-    transition: transform .2s linear, background-color .5s linear;
+    transition: transform .2s linear, background-color .3s linear;
 }
 .news-list ul li:hover{
-    background-color: #000;
-    color: #fff;
+    background-color: #eee;
+    color: #555;
     transform: scale(1.05);
 }
 .news-list ul li:last-child:hover{
@@ -107,7 +107,7 @@ header h4{
     cursor: pointer;
 }
 
-.active-page{background-color: #000; color: #fff;}
+.active{background-color: #000; color: #fff;}
 .news-contents{
     flex: 2 1 1;    /* border:1px solid red; */
     width: 100%;
