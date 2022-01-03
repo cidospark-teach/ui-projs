@@ -20,8 +20,9 @@
             <div class="news-list">
                 <div class="bulletine-title">News bulletine</div>
                 <ul>
-                    <li class="active">News 1</li>
-                    <li>News 2</li>
+                    <li id="menu-1" name="News 1" class="active menu-list">News 1</li>
+                    <li id="menu-2" name="News 2"  class="menu-list">News 2</li>
+                    <li id="menu-3" name="News 3"  class="menu-list">News 3</li>
                     <li id="pages">
                         <ul>
                             <li>&laquo;</li>
@@ -35,12 +36,34 @@
             </div>
 
             <div class="news-contents">
-                <ul>
-                    <li>News box 1</li>
-                    <li>News box 2</li>
+                <ul id="contents-wrapper">
+                    <li id="prev-box">News box</li>
+                    <li id="current-box">News box</li>
                 </ul>
             </div>
         </div>
     </section>
+
+    <script>
+        const menuList = document.querySelectorAll(".menu-list");
+        const contentWrap = document.querySelector("#contents-wrapper")
+        let index = 0; let prevIndex = 0;
+        menuList.forEach(element => {
+           element.addEventListener("click", (e) => {
+                const p = e.target.parentElement;
+                let index = parseInt(Array.prototype.indexOf.call(p.children, e.target));
+                if(index > prevIndex){
+                    contentWrap.classList.remove("move-up");
+                    contentWrap.classList.add("move-down");
+                    document.getElementById("current-box").innerHTML = e.target.getAttribute("name");
+                }else{
+                    contentWrap.classList.remove("move-down");
+                    contentWrap.classList.add("move-up");
+                    document.getElementById("prev-box").innerHTML = e.target.getAttribute("name");
+                }
+                prevIndex = index;
+           })
+        });
+    </script>
 </body>
 </html>

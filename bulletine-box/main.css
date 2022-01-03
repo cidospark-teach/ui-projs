@@ -114,3 +114,37 @@ header h4{
     padding: 40px;
     background-color: #f8f8f8;
 }
+.news-contents ul li{
+    width: 100%; 
+    min-height: 200px;
+    border: 1px solid grey;
+    margin-bottom: 30px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.news-contents ul{
+    border: 1px solid grey;
+    position: relative;
+    transition: top 2s linear, bottom 2s linear;
+}
+
+
+/* move news contents animation*/
+@keyframes moveUp{
+    100%{
+        bottom: 0px
+    }
+}
+@keyframes moveDown{
+    100%{
+        top: -230px
+    }
+}
+
+.move-up{
+    animation: moveUp .5s ease-in-out forwards;
+}
+
+.move-down{
+    animation: moveDown .5s ease-in-out forwards;
+}
