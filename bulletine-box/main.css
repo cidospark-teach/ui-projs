@@ -123,28 +123,27 @@ header h4{
     overflow-y: auto;
 }
 .news-contents ul{
-    border: 1px solid grey;
     position: relative;
-    transition: top 2s linear, bottom 2s linear;
+    top: 0;
+    bottom: 0;
 }
-
 
 /* move news contents animation*/
 @keyframes moveUp{
     100%{
-        bottom: 0px
+        top: -230px
     }
 }
 @keyframes moveDown{
     100%{
-        top: -230px
+        bottom: 0px
     }
 }
 
 .move-up{
-    animation: moveUp .5s ease-in-out forwards;
+    animation: moveUp .1s ease-in-out forwards;
 }
 
 .move-down{
-    animation: moveDown .5s ease-in-out forwards;
+    animation: moveDown .1s ease-in-out forwards;
 }

@@ -38,7 +38,7 @@
             <div class="news-contents">
                 <ul id="contents-wrapper">
                     <li id="prev-box">News box</li>
-                    <li id="current-box">News box</li>
+                    <li id="current-box">News</li>
                 </ul>
             </div>
         </div>
@@ -46,20 +46,25 @@
 
     <script>
         const menuList = document.querySelectorAll(".menu-list");
-        const contentWrap = document.querySelector("#contents-wrapper")
+        const contentWrap = document.querySelector("#contents-wrapper");
+        const curBox = document.getElementById("current-box");
+        const prevBox = document.getElementById("prev-box");
+
         let index = 0; let prevIndex = 0;
         menuList.forEach(element => {
            element.addEventListener("click", (e) => {
                 const p = e.target.parentElement;
                 let index = parseInt(Array.prototype.indexOf.call(p.children, e.target));
                 if(index > prevIndex){
-                    contentWrap.classList.remove("move-up");
-                    contentWrap.classList.add("move-down");
-                    document.getElementById("current-box").innerHTML = e.target.getAttribute("name");
-                }else{
-                    contentWrap.classList.remove("move-down");
                     contentWrap.classList.add("move-up");
-                    document.getElementById("prev-box").innerHTML = e.target.getAttribute("name");
+                    contentWrap.classList.remove("move-down");
+                    curBox.innerHTML = e.target.getAttribute("name");
+                    prevBox.style.visibility = "hidden";
+                }else{
+                    prevBox.style.visibility = "visible";
+                    contentWrap.classList.add("move-down");
+                    contentWrap.classList.remove("move-up");
+                    prevBox.innerHTML = e.target.getAttribute("name");
                 }
                 prevIndex = index;
            })
